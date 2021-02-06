@@ -1,1 +1,177 @@
-В РАЗРАБОТКЕ
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML Academy: Девайс</title>
+	</head>
+	<body>
+
+		<header>
+			<a href="index.html"><img src="https://via.placeholder.com/150x50" alt="Логотип Device"></a>
+			<form>
+				<input type="text" name="search" placeholder="Поиск по сайту">
+				<button type="submit">Поиск</button>
+			</form>
+			<a href="blank.html">Войти</a>
+			<a href="blank.html">Сравнить</a>
+			<a href="blank.html">Корзина</a>
+			<nav>
+				<ul>
+					<li>
+						<a href="catalog.html">Каталог товаров</a>
+						<ul>
+							<li><a href="blank.html">Виртуальная реальность</a></li>
+							<li><a href="blank.html">Фитнес-браслеты</a></li>
+							<li><a href="blank.html">Квадрокоптер</a></li>
+							<li><a href="catalog-monopod.html">Моноподы для селфи</a></li>
+							<li><a href="blank.html">Умные часы</a></li>
+							<li><a href="blank.html">Экшн-камеры</a></li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#services-delivery">Доставка</a>
+				<a href="#services-warranty">Гарантия</a>
+				<a href="#section-contacts">Контакты</a>
+			</nav>
+		</header>
+
+    <main>
+        <h1>Моноподы для селфи</h1>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="blank.html">Каталог товаров</a></li>
+            <li>Моноподы для селфи</li>
+        </ul>
+
+        <section>
+            <h2>Фильтр товаров</h2>
+
+            <form action="/">
+                <fieldset>
+                    <legend>Стоимость</legend>
+                    <label>От <input type="number" name="filter-price-min" value="0"  min="0" max="7499"></label>
+                    <label>До <input type="number" name="filter-price-max" value="5000"  min="1" max="7500"></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Цвет</legend>
+                    <ul>
+                        <li><label><input type="checkbox" name="filter-colors" value="black">Чёрный</label></li>
+                        <li><label><input type="checkbox" name="filter-colors" value="white">Белый</label></li>
+                        <li><label><input type="checkbox" name="filter-colors" value="blue">Синий</label></li>
+                        <li><label><input type="checkbox" name="filter-colors" value="red">Красный</label></li>
+                        <li><label><input type="checkbox" name="filter-colors" value="pink">Розовый</label></li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Bluetooth</legend>
+                    <label><input type="radio" name="filter-bluetooth" value="1">Есть</label>
+                    <label><input type="radio" name="filter-bluetooth" value="0">Нет</label>
+                </fieldset>
+                <button type="submit">Показать</button>
+            </form>
+
+        </section>
+
+        <section>
+            <h2>Сортировка, товары, пагинация</h2>
+
+            <section>
+                <h3>Сортировка:</h3>
+                <ul>
+                    <li><a href="#">По цене<</a></li>
+                    <li><a href="#">По типу</a></li>
+                    <li><a href="#">По типу</a></li>
+                    <li><a href="#">По популярности</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">По возрастанию<</a></li>
+                    <li><a href="#">По убыванию</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Товары</h3>
+                <article>
+                    <h4><a href="blank.html">Любительская селфи палка <span>1100 руб.</span></a></h4>
+                    <div>
+                        <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Любительская селфи палка">
+                        <a href="#">В корзину</a>
+                        <a href="#">Добавить к сравнению</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h4><a href="blank.html">Профессиональная селфи-палка <span>1500 руб.</span></a></h4>
+                    <div>
+                        <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Профессиональная селфи-палка">
+                        <a href="#">В корзину</a>
+                        <a href="#">Добавить к сравнению</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h4><a href="blank.html">Непотопляемая селфи-палка <span>1500 руб.</span></a></h4>
+                    <div>
+                        <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Непотопляемая селфи-палка">
+                        <a href="#">В корзину</a>
+                        <a href="#">Добавить к сравнению</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h4><a href="blank.html">Селфи-палка «Следуй за мной» <span>1900 руб. руб.</span></a></h4>
+                    <div>
+                        <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                        <a href="#">В корзину</a>
+                        <a href="#">Добавить к сравнению</a>
+                    </div>
+                </article>
+            </section>
+
+            <section>
+                <h3>Пагинация</h3>
+                <ul>
+                    <li><a>Назад</a></li>
+                    <li><a>1</a></li>
+                    <li><a href="catalog-monopod.html?p=2">2</a></li>
+                    <li><a href="catalog-monopod.html?p=3">3</a></li>
+                    <li><a href="catalog-monopod.html?p=2">Вперёд</a></li>
+                </ul>
+            </section>
+        </section>
+
+    </main>
+
+		<footer>
+			<div>
+				<a href="index.html"><img src="https://via.placeholder.com/150x50" alt="Логотип Device"></a>
+				<p>г. Москва, ул. Строителей, 15</p>
+			</div>
+			<div>
+				<ul>
+					<li><a href="#services-delivery">Доставка</a></li>
+					<li><a href="#services-warranty">Гарантия</a></li>
+					<li><a href="#section-contacts">Контакты</a></li>
+				</ul>
+			</div>
+			<div>
+				<p>
+                    <a href="blank.html">Валентин Петухов</a>
+					<a href="blank.html">Выйти</a>
+					<a href="blank.html">Сравнить</a>
+					<a href="blank.html">Корзина</a>
+				</p>
+				<p><a href="tel:74954959595">Тел.: +7 (495) 495-95-95</a></p>
+			</div>
+			<div>
+				<ul>
+					<li><a href="#" title="Ссылка на фейсбук">Фейсбук</a></li>
+					<li><a href="#" title="Ссылка на инсту">Инстаграмм</a></li>
+					<li><a href="#" title="Ссылка на твиттер">Твиттер</a></li>
+				</ul>
+				<a href="https://htmlacademy.ru/">htmlacademy</a>
+			</div>
+		</footer>
+
+	</body>
+</html>
