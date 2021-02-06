@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Николай Полторак](https://up.htmlacademy.ru/htmlcss/30/user/270265).
-* Наставник: [Ксения Торкова](https://htmlacademy.ru/profile/id23249).
+* Наставник: [Никита Шугаев](https://htmlacademy.ru/profile/id967245).
 
 ---
 
