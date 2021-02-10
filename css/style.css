@@ -149,7 +149,7 @@ h2, h3 {
 }
 
 /* about us */
-ul.section-about-examples {
+.section-about-examples {
   font-family: "Gilroy";
   font-weight: 800;
   font-size: 16px;
