@@ -3,11 +3,23 @@
 	<head>
 		<meta charset="utf-8">
 		<title>HTML Academy: Девайс</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!-- favicon -->
 	</head>
 	<body>
 
 		<header>
-			<a href="index.html"><img src="https://via.placeholder.com/150x50" alt="Логотип Device"></a>
+			<a href="index.html"><img src="img/content/logo.svg" width="163.3" height="34.96" alt="Логотип Device"></a>
 			<form>
 				<input type="text" name="search" placeholder="Поиск по сайту">
 				<button type="submit">Поиск</button>
@@ -36,115 +48,115 @@
 		</header>
 
     <main>
-        <h1>Моноподы для селфи</h1>
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="blank.html">Каталог товаров</a></li>
-            <li>Моноподы для селфи</li>
-        </ul>
+      <h1>Моноподы для селфи</h1>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="blank.html">Каталог товаров</a></li>
+        <li>Моноподы для селфи</li>
+      </ul>
+
+      <section>
+        <h2>Фильтр товаров</h2>
+
+        <form action="/">
+          <fieldset>
+            <legend>Стоимость</legend>
+            <label>От <input type="number" name="filter-price-min" value="0"  min="0" max="7499"></label>
+            <label>До <input type="number" name="filter-price-max" value="5000"  min="1" max="7500"></label>
+          </fieldset>
+          <fieldset>
+            <legend>Цвет</legend>
+            <ul>
+              <li><label><input type="checkbox" name="filter-colors" value="black">Чёрный</label></li>
+              <li><label><input type="checkbox" name="filter-colors" value="white">Белый</label></li>
+              <li><label><input type="checkbox" name="filter-colors" value="blue">Синий</label></li>
+              <li><label><input type="checkbox" name="filter-colors" value="red">Красный</label></li>
+              <li><label><input type="checkbox" name="filter-colors" value="pink">Розовый</label></li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Bluetooth</legend>
+            <label><input type="radio" name="filter-bluetooth" value="1">Есть</label>
+            <label><input type="radio" name="filter-bluetooth" value="0">Нет</label>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
+
+      </section>
+
+      <section>
+        <h2>Сортировка, товары, пагинация</h2>
 
         <section>
-            <h2>Фильтр товаров</h2>
-
-            <form action="/">
-                <fieldset>
-                    <legend>Стоимость</legend>
-                    <label>От <input type="number" name="filter-price-min" value="0"  min="0" max="7499"></label>
-                    <label>До <input type="number" name="filter-price-max" value="5000"  min="1" max="7500"></label>
-                </fieldset>
-                <fieldset>
-                    <legend>Цвет</legend>
-                    <ul>
-                        <li><label><input type="checkbox" name="filter-colors" value="black">Чёрный</label></li>
-                        <li><label><input type="checkbox" name="filter-colors" value="white">Белый</label></li>
-                        <li><label><input type="checkbox" name="filter-colors" value="blue">Синий</label></li>
-                        <li><label><input type="checkbox" name="filter-colors" value="red">Красный</label></li>
-                        <li><label><input type="checkbox" name="filter-colors" value="pink">Розовый</label></li>
-                    </ul>
-                </fieldset>
-                <fieldset>
-                    <legend>Bluetooth</legend>
-                    <label><input type="radio" name="filter-bluetooth" value="1">Есть</label>
-                    <label><input type="radio" name="filter-bluetooth" value="0">Нет</label>
-                </fieldset>
-                <button type="submit">Показать</button>
-            </form>
-
+          <h3>Сортировка:</h3>
+          <ul>
+            <li><a href="#">По цене</a></li>
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По популярности</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">По возрастанию</a></li>
+            <li><a href="#">По убыванию</a></li>
+          </ul>
         </section>
 
         <section>
-            <h2>Сортировка, товары, пагинация</h2>
+          <h3>Товары</h3>
+          <article>
+            <h4><a href="blank.html">Любительская селфи палка <span>1100 руб.</span></a></h4>
+            <div>
+              <img src="img/content/catalog/item-1.jpg" width="360" height="380" alt="Любительская селфи палка">
+              <a href="#">В корзину</a>
+              <a href="#">Добавить к сравнению</a>
+            </div>
+          </article>
 
-            <section>
-                <h3>Сортировка:</h3>
-                <ul>
-                    <li><a href="#">По цене<</a></li>
-                    <li><a href="#">По типу</a></li>
-                    <li><a href="#">По типу</a></li>
-                    <li><a href="#">По популярности</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">По возрастанию<</a></li>
-                    <li><a href="#">По убыванию</a></li>
-                </ul>
-            </section>
+          <article>
+            <h4><a href="blank.html">Профессиональная селфи-палка <span>1500 руб.</span></a></h4>
+            <div>
+              <img src="img/content/catalog/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+              <a href="#">В корзину</a>
+              <a href="#">Добавить к сравнению</a>
+            </div>
+          </article>
 
-            <section>
-                <h3>Товары</h3>
-                <article>
-                    <h4><a href="blank.html">Любительская селфи палка <span>1100 руб.</span></a></h4>
-                    <div>
-                        <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Любительская селфи палка">
-                        <a href="#">В корзину</a>
-                        <a href="#">Добавить к сравнению</a>
-                    </div>
-                </article>
+          <article>
+            <h4><a href="blank.html">Непотопляемая селфи-палка <span>1500 руб.</span></a></h4>
+            <div>
+              <img src="img/content/catalog/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+              <a href="#">В корзину</a>
+              <a href="#">Добавить к сравнению</a>
+            </div>
+          </article>
 
-                <article>
-                    <h4><a href="blank.html">Профессиональная селфи-палка <span>1500 руб.</span></a></h4>
-                    <div>
-                        <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Профессиональная селфи-палка">
-                        <a href="#">В корзину</a>
-                        <a href="#">Добавить к сравнению</a>
-                    </div>
-                </article>
-
-                <article>
-                    <h4><a href="blank.html">Непотопляемая селфи-палка <span>1500 руб.</span></a></h4>
-                    <div>
-                        <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Непотопляемая селфи-палка">
-                        <a href="#">В корзину</a>
-                        <a href="#">Добавить к сравнению</a>
-                    </div>
-                </article>
-
-                <article>
-                    <h4><a href="blank.html">Селфи-палка «Следуй за мной» <span>1900 руб. руб.</span></a></h4>
-                    <div>
-                        <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                        <a href="#">В корзину</a>
-                        <a href="#">Добавить к сравнению</a>
-                    </div>
-                </article>
-            </section>
-
-            <section>
-                <h3>Пагинация</h3>
-                <ul>
-                    <li><a>Назад</a></li>
-                    <li><a>1</a></li>
-                    <li><a href="catalog-monopod.html?p=2">2</a></li>
-                    <li><a href="catalog-monopod.html?p=3">3</a></li>
-                    <li><a href="catalog-monopod.html?p=2">Вперёд</a></li>
-                </ul>
-            </section>
+          <article>
+            <h4><a href="blank.html">Селфи-палка «Следуй за мной» <span>1900 руб. руб.</span></a></h4>
+            <div>
+              <img src="img/content/catalog/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+              <a href="#">В корзину</a>
+              <a href="#">Добавить к сравнению</a>
+            </div>
+          </article>
         </section>
+
+        <section>
+          <h3>Пагинация</h3>
+          <ul>
+            <li><a>Назад</a></li>
+            <li><a>1</a></li>
+            <li><a href="catalog-monopod.html?p=2">2</a></li>
+            <li><a href="catalog-monopod.html?p=3">3</a></li>
+            <li><a href="catalog-monopod.html?p=2">Вперёд</a></li>
+          </ul>
+        </section>
+      </section>
 
     </main>
 
 		<footer>
 			<div>
-				<a href="index.html"><img src="https://via.placeholder.com/150x50" alt="Логотип Device"></a>
+				<a href="index.html"><img src="img/content/logo_alt.svg" width="163.3" height="34.96" alt="Логотип Device"></a>
 				<p>г. Москва, ул. Строителей, 15</p>
 			</div>
 			<div>
