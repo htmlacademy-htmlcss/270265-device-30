@@ -1,0 +1,184 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Light.woff2') format('woff2'),
+      url('../fonts/Gilroy-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+      url('../fonts/Gilroy-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Light.woff2') format('woff2'),
+      url('../fonts/OpenSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans.woff2') format('woff2'),
+      url('../fonts/OpenSans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  --clr-text-basic: #000000;
+  --clr-text-alt: #ffffff;
+  --clr-bg-alt: #363636;
+  --clr-special: #F7E296;
+}
+
+
+/* common */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--clr-text-basic);
+}
+
+h2, h3 {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 47px;
+  letter-spacing: 0.2em;
+}
+
+.button {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.reset-links a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.no-list-style,
+.no-list-style ul {
+  list-style: none;
+}
+/* common */
+
+
+/* index */
+
+/* header */
+.header-main {
+  background-color: var(--clr-special);
+}
+
+.header-main-nav a {
+  font-family: "Gilroy";
+  font-weight: 800;
+}
+
+.header-main-nav-catalog a {
+  font-family: "Open Sans";
+  font-weight: 300;
+}
+
+.best-item-slogan {
+  font-family: "Gilroy";
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 58px;
+}
+
+/* slider */
+.section-best-item-descr {
+  line-height: 20px;
+}
+
+.section-best-item-params {
+  font-family: "Gilroy";
+  letter-spacing: 0.1em;
+  font-size: 36px;
+}
+
+.section-best-item-params th {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+/* popular */
+.section-popular-list a {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+
+/* services */
+.section-services .current-button {
+  background-color: var(--clr-text-basic);
+  color: var(--clr-special);
+}
+
+.section-services-list p {
+  line-height: 30px;
+}
+
+/* about us */
+ul.section-about-examples {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 16px;
+  list-style-type: disc;
+}
+
+/* contacts */
+
+.footer-main {
+  background: var(--clr-bg-alt);
+  color: var(--clr-text-alt);
+}
+
+.footer-main-links {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.form-feedback label {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.form-feedback input,
+.form-feedback textarea {
+  font-size: 14px;
+  line-height: 19px;
+}

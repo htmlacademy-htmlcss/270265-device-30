@@ -15,11 +15,16 @@
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <!-- favicon -->
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- styles -->
 	</head>
 	<body>
 
-		<header>
-			<a><img src="img/content/logo.svg" width="163.3" height="34.96" alt="Логотип Device"></a>
+		<header class="header-main reset-links">
+			<a><img src="img/content/logo.svg" width="163" height="35" alt="Логотип Device"></a>
 			<form>
 				<input type="text" name="search" placeholder="Поиск по сайту">
 				<button type="submit">Поиск</button>
@@ -27,11 +32,11 @@
 			<a href="blank.html">Войти</a>
 			<a href="blank.html">Сравнить</a>
 			<a href="blank.html">Корзина</a>
-			<nav>
-				<ul>
+			<nav class="header-main-nav list-links-big">
+				<ul class="no-list-style">
 					<li>
 						<a href="catalog.html">Каталог товаров</a>
-						<ul>
+						<ul class="header-main-nav-catalog">
 							<li><a href="blank.html">Виртуальная реальность</a></li>
 							<li><a href="blank.html">Фитнес-браслеты</a></li>
 							<li><a href="blank.html">Квадрокоптер</a></li>
@@ -53,14 +58,14 @@
 				<ol>
 					<li>
 						<img src="img/content/index/slider_1.png" width="384" height="486" alt="Палка для селфи">
-						<p>Делай селфи,<br>как Бен Стиллер!</p>
-						<p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-						<a href="blank.html">Подробнее</a>
-						<table>
+						<p class="section-best-item-slogan">Делай селфи,<br>как Бен Стиллер!</p>
+						<p class="section-best-item-descr">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+						<a class="button" href="blank.html">Подробнее</a>
+						<table class="section-best-item-params">
 							<tr>
-								<td>Длина палки</td>
-								<td>Вес палки</td>
-								<td>Материал</td>
+								<th>Длина палки</th>
+								<th>Вес палки</th>
+								<th>Материал</th>
 							</tr>
 							<tr>
 								<td>8,5 м</td>
@@ -71,12 +76,12 @@
 					</li>
 					<li>
 						<img src="img/content/index/slider_2.png" width="345" height="485" alt="Фитнес-браслет">
-						<p>Худеем<br>правильно!</p>
-						<p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-						<a href="blank.html">Подробнее</a>
-						<table>
+						<p class="section-best-item-slogan">Худеем<br>правильно!</p>
+						<p class="section-best-item-descr">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+						<a class="button" href="blank.html">Подробнее</a>
+						<table class="section-best-item-params">
 							<tr>
-								<td>Без подзарядки</td>
+								<th>Без подзарядки</th>
 							</tr>
 							<tr>
 								<td>48 часов</td>
@@ -85,13 +90,13 @@
 					</li>
 					<li>
 						<img src="img/content/index/slider_3.png" width="526" height="334" alt="Квадрокоптер">
-						<p>Порхает как бабочка,<br>жалит как пчела!</p>
-						<p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-						<a href="blank.html">Подробнее</a>
-						<table>
+						<p class="section-best-item-slogan">Порхает как бабочка,<br>жалит как пчела!</p>
+						<p class="section-best-item-descr">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+						<a class="button" href="blank.html">Подробнее</a>
+						<table class="section-best-item-params">
 							<tr>
-								<td>Дальность полёта</td>
-								<td>Радиус поражения</td>
+								<th>Дальность полёта</th>
+								<th>Радиус поражения</th>
 							</tr>
 							<tr>
 								<td>800 м</td>
@@ -109,7 +114,7 @@
 
 			<section>
 				<h2>Популярные категории</h2>
-				<ul>
+				<ul class="section-popular-list reset-links no-list-style">
 					<li>
 						<a href="blank.html">Виртуальная<br>реальность</a>
 					</li>
@@ -131,15 +136,15 @@
 				</ul>
 			</section>
 
-			<section>
+			<section class="section-services">
 				<h2>Сервисы</h2>
 				<p>
-					<button type="button">Доставка</button>
-					<button type="button">Гарантия</button>
-					<button type="button">Кредит</button>
+					<button class="button current-button" type="button">Доставка</button>
+					<button class="button" type="button">Гарантия</button>
+					<button class="button" type="button">Кредит</button>
 				</p>
 
-				<ul>
+				<ul class="section-services-list no-list-style">
 					<li id="services-delivery">
 						<h3>Доставка</h3>
 						<p>
@@ -169,7 +174,7 @@
 
 			<section>
 				<h2>Производители</h2>
-				<ul>
+				<ul class="no-list-style">
 					<li><a href="#"><img src="/img/content/index/partner-1.png" width="260" height="100" alt="dji"></a></li>
 					<li><a href="#"><img src="/img/content/index/partner-2.png" width="260" height="100" alt="sp gadgets"></a></li>
 					<li><a href="#"><img src="/img/content/index/partner-3.png" width="260" height="100" alt="gopro"></a></li>
@@ -177,61 +182,63 @@
 				</ul>
 			</section>
 
-			<section>
-				<h2>О нас</h2>
-				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-				<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-				<ul>
-					<li><a href="#">Деловые линии</a></li>
-					<li><a href="#">Автотрейдинг</a></li>
-					<li><a href="#">ЖелДорЭкспедиция</a></li>
-				</ul>
-				<a href="blank.html">Подробнее о нас</a>
-			</section>
+      <div class="section-double">
+        <section>
+          <h2>О нас</h2>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+          <ul class="section-about-examples reset-links">
+            <li><a href="#">Деловые линии</a></li>
+            <li><a href="#">Автотрейдинг</a></li>
+            <li><a href="#">ЖелДорЭкспедиция</a></li>
+          </ul>
+          <a class="button" href="blank.html">Подробнее о нас</a>
+        </section>
 
-			<section id="section-contacts">
-				<h2>Контакты</h2>
-				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
-				</p>
-				<img src="img/content/index/map.png" width="560" height="222" alt="г. Москва, ул. Строителей, 15">
-				<a href="blank.html">Напишите нам</a>
-			</section>
+        <section id="section-contacts">
+          <h2>Контакты</h2>
+          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+          </p>
+          <img src="img/content/index/map.png" width="560" height="222" alt="г. Москва, ул. Строителей, 15">
+          <a class="button" href="blank.html">Напишите нам</a>
+        </section>
+      </div>
 		</main>
 
-		<footer>
+		<footer class="footer-main">
 			<div>
-				<a><img src="img/content/logo_alt.svg" width="163.3" height="34.96" alt="Логотип Device"></a>
+				<a><img src="img/content/logo_alt.svg" width="163" height="35" alt="Логотип Device"></a>
 				<p>г. Москва, ул. Строителей, 15</p>
 			</div>
 			<div>
-				<ul>
+				<ul class="footer-main-links reset-links no-list-style">
 					<li><a href="#services-delivery">Доставка</a></li>
 					<li><a href="#services-warranty">Гарантия</a></li>
 					<li><a href="#section-contacts">Контакты</a></li>
 				</ul>
 			</div>
 			<div>
-				<p>
+				<p class="footer-main-actions reset-links">
 					<a href="blank.html">Войти</a>
 					<a href="blank.html">Сравнить</a>
 					<a href="blank.html">Корзина</a>
 				</p>
-				<p><a href="tel:74954959595">Тел.: +7 (495) 495-95-95</a></p>
+				<p class="reset-links"><a href="tel:74954959595">Тел.: +7 (495) 495-95-95</a></p>
 			</div>
 			<div>
-				<ul>
+				<ul class="footer-main-social no-list-style">
 					<li><a href="#" title="Ссылка на фейсбук">Фейсбук</a></li>
 					<li><a href="#" title="Ссылка на инсту">Инстаграмм</a></li>
 					<li><a href="#" title="Ссылка на твиттер">Твиттер</a></li>
 				</ul>
-				<a href="https://htmlacademy.ru/">htmlacademy</a>
+				<a class="footer-main-creator" href="https://htmlacademy.ru/">htmlacademy</a>
 			</div>
 		</footer>
 
 		<!-- Модалки -->
-		<section>
+		<section class="modal">
 			<h2>Обратная связь</h2>
-			<form action="/">
+			<form class="form-feedback" action="/">
 				<button>Закрыть</button>
 				<p>
 					<label for="feedback-name">Ваше имя:</label>
@@ -245,7 +252,7 @@
 					<label for="feedback-msg">Текст письма:</label>
 					<textarea name="message" id="feedback-msg" cols="30" rows="10" placeholder="В свободной форме"></textarea>
 				</p>
-				<button type="submit">Отправить</button>
+				<button class="button" type="submit">Отправить</button>
 			</form>
 		</section>
 
