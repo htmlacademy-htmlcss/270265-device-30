@@ -68,14 +68,15 @@ ul {
   list-style: none;
 }
 
-h2,
-h3,
 .title {
   font-family: "Gilroy";
   font-weight: 800;
   font-size: 47px;
-  letter-spacing: 0.2em;
   line-height: 58px;
+}
+
+.title-wide {
+  letter-spacing: 0.2em;
 }
 
 .button {
@@ -86,10 +87,10 @@ h3,
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-/* common */
 
-
-/* index */
+.breadcrumbs li {
+  opacity: 0.3;
+}
 
 /* header */
 .header {
@@ -107,11 +108,24 @@ h3,
 }
 
 
-/* slider */
-.slider-item-slogan {
-  letter-spacing: 0;
+/* footer */
+.footer {
+  background: var(--clr-bg-alt);
+  color: var(--clr-text-alt);
 }
 
+.footer-links {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+/* common */
+
+
+/* index page*/
+/* slider */
 .slider-item-description {
   line-height: 20px;
 }
@@ -156,22 +170,6 @@ h3,
 
 /* contacts */
 
-
-/* footer */
-.footer {
-  background: var(--clr-bg-alt);
-  color: var(--clr-text-alt);
-}
-
-.footer-links {
-  font-family: "Gilroy";
-  font-weight: 800;
-  font-size: 18px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-
 /* modal feedback */
 .feedback label {
   font-family: "Gilroy";
@@ -184,3 +182,8 @@ h3,
   font-size: 14px;
   line-height: 19px;
 }
+
+
+
+/* page catalog_item */
+.filter, .items
