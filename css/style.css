@@ -186,6 +186,33 @@ ul {
 
 
 /* page catalog_item */
-.filter, .items {
+.filter h3,
+.items-sorting h3 {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 
+.filter legend {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
+.filter label {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+
+.sorting-types li {
+  font-size: 14px;
+  opacity: 0.3;
+}
+
+.sorting-types li.current {
+  opacity: 1;
 }
