@@ -44,13 +44,6 @@
 
 
 /* common */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
@@ -59,11 +52,30 @@ body {
   color: var(--clr-text-basic);
 }
 
-h2, h3 {
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+.title {
   font-family: "Gilroy";
   font-weight: 800;
   font-size: 47px;
   letter-spacing: 0.2em;
+  line-height: 58px;
 }
 
 .button {
@@ -73,18 +85,6 @@ h2, h3 {
   line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  text-decoration: inherit;
-  color: inherit;
-}
-
-.reset-links a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-.no-list-style,
-.no-list-style ul {
-  list-style: none;
 }
 /* common */
 
@@ -92,45 +92,43 @@ h2, h3 {
 /* index */
 
 /* header */
-.header-main {
+.header {
   background-color: var(--clr-special);
 }
 
-.header-main-nav a {
+.header-navigation a {
   font-family: "Gilroy";
   font-weight: 800;
 }
 
-.header-main-nav-catalog a {
+.header-catalog a {
   font-family: "Open Sans";
   font-weight: 300;
 }
 
-.best-item-slogan {
-  font-family: "Gilroy";
-  font-size: 47px;
-  font-weight: 800;
-  line-height: 58px;
-}
 
 /* slider */
-.section-best-item-descr {
+.slider-item-slogan {
+  letter-spacing: 0;
+}
+
+.slider-item-description {
   line-height: 20px;
 }
 
-.section-best-item-params {
+.slider-item-params {
   font-family: "Gilroy";
   letter-spacing: 0.1em;
   font-size: 36px;
 }
 
-.section-best-item-params th {
+.slider-item-params th {
   font-size: 13px;
   font-weight: 300;
 }
 
 /* popular */
-.section-popular-list a {
+.popular-list a {
   font-family: "Gilroy";
   font-weight: 800;
   font-size: 18px;
@@ -139,17 +137,17 @@ h2, h3 {
 }
 
 /* services */
-.section-services .current-button {
+.services .button-current {
   background-color: var(--clr-text-basic);
   color: var(--clr-special);
 }
 
-.section-services-list p {
+.services-list p {
   line-height: 30px;
 }
 
 /* about us */
-.section-about-examples {
+.about_us-examples {
   font-family: "Gilroy";
   font-weight: 800;
   font-size: 16px;
@@ -158,12 +156,14 @@ h2, h3 {
 
 /* contacts */
 
-.footer-main {
+
+/* footer */
+.footer {
   background: var(--clr-bg-alt);
   color: var(--clr-text-alt);
 }
 
-.footer-main-links {
+.footer-links {
   font-family: "Gilroy";
   font-weight: 800;
   font-size: 18px;
@@ -171,14 +171,16 @@ h2, h3 {
   text-transform: uppercase;
 }
 
-.form-feedback label {
+
+/* modal feedback */
+.feedback label {
   font-family: "Gilroy";
   font-weight: 800;
   font-size: 18px;
 }
 
-.form-feedback input,
-.form-feedback textarea {
+.feedback input,
+.feedback textarea {
   font-size: 14px;
   line-height: 19px;
 }
