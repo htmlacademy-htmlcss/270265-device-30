@@ -248,3 +248,9 @@ ul {
   opacity: 0.3;
 }
 
+li.pagination-back,
+li.pagination-current,
+li.pagination-forward {
+  opacity: 1;
+}
+
