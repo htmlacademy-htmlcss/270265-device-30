@@ -216,3 +216,35 @@ ul {
 .sorting-types li.current {
   opacity: 1;
 }
+
+.item-title {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+
+.item-price {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+
+.item-button-compare {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+.items-pagination {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pagination-list li:not([class]) {
+  opacity: 0.3;
+}
+
