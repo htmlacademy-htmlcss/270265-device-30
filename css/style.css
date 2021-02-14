@@ -44,8 +44,9 @@
 
 
 /* common */
+*,
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 28px;
@@ -69,7 +70,7 @@ ul {
 }
 
 .title {
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -80,7 +81,7 @@ ul {
 }
 
 .button {
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -98,12 +99,12 @@ ul {
 }
 
 .header-navigation a {
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
 }
 
 .header-catalog a {
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 300;
 }
 
@@ -115,7 +116,7 @@ ul {
 }
 
 .footer-links {
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   letter-spacing: 0.2em;
@@ -131,7 +132,7 @@ ul {
 }
 
 .slider-item-params {
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   letter-spacing: 0.1em;
   font-size: 36px;
 }
@@ -143,7 +144,7 @@ ul {
 
 /* popular */
 .popular-list a {
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -162,7 +163,7 @@ ul {
 
 /* about us */
 .about_us-examples {
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 16px;
   list-style-type: disc;
@@ -172,7 +173,7 @@ ul {
 
 /* modal feedback */
 .feedback label {
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
 }
@@ -188,7 +189,7 @@ ul {
 /* page catalog_item */
 .filter h3,
 .items-sorting h3 {
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 16px;
   letter-spacing: 0.1em;
@@ -196,7 +197,7 @@ ul {
 }
 
 .filter legend {
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 14px;
   letter-spacing: 0.1em;
@@ -216,3 +217,41 @@ ul {
 .sorting-types li.current {
   opacity: 1;
 }
+
+.item-title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+
+.item-price {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+
+.item-button-compare {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+.items-pagination {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pagination-list li {
+  opacity: 0.3;
+}
+
+li.pagination-back,
+li.pagination-current,
+li.pagination-forward {
+  opacity: 1;
+}
+
