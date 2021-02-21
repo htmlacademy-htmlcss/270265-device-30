@@ -42,6 +42,7 @@
   --clr-special: #F7E296;
   --clr-special-dark: #F0C52E;
   --clr-basic-grey-light: #E5E5E5;
+  --clr-basic-grey-dark: #DCDCDC;
 }
 
 
@@ -54,12 +55,14 @@
 
 html {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   font-weight: 300;
+  line-height: 28px;
   color: var(--clr-text-basic);
 
   min-height: 100%;
@@ -99,6 +102,14 @@ h4 {
   margin-bottom: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
+h1 {
+  margin-top: 44px;
+}
+
 .d-none {
   display: none !important;
 }
@@ -127,7 +138,9 @@ h4 {
   padding: 9px 0;
   display: inline-block;
   text-align: center;
+  z-index: 1;
 }
+
 
 .button::before {
   content: "";
@@ -235,6 +248,8 @@ h4 {
   opacity: 0;
   pointer-events: none;
   position: absolute;
+  left: -60px;
+  width: 100%;
 }
 
 .header-catalog:hover .header-subcatalog {
@@ -280,7 +295,6 @@ h4 {
 .footer {
   background: var(--clr-bg-alt);
   color: var(--clr-text-alt);
-  margin-top: 74px;
 }
 
 .footer-box {
@@ -487,6 +501,10 @@ h4 {
   color: var(--clr-special);
 }
 
+.service-current_button button::before {
+  display: none;
+}
+
 .services-list p {
   line-height: 30px;
 }
@@ -503,6 +521,7 @@ h4 {
 .company_info {
   display: flex;
   margin-top: 88px;
+  padding-bottom: 75px;
 }
 
 .company_info .button {
@@ -594,6 +613,24 @@ h4 {
 
 
 /* page catalog_item */
+.breadcrumbs {
+  display: flex;
+  margin-top: 31px;
+}
+
+.breadcrumbs > * {
+  margin-right: 34px;
+}
+
+.catalog {
+  display: flex;
+  margin-top: 51px;
+}
+
+.items {
+  padding-bottom: 78px;
+}
+
 .filter h3,
 .items-sorting h3 {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -603,11 +640,71 @@ h4 {
   text-transform: uppercase;
 }
 
-.filter legend {
+.filter {
+  max-width: 330px;
+  width: 100%;
+  position: relative;
+  background: var(--clr-basic-grey-light);
+}
+
+.filter::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100vw;
+  top: 0;
+  left: -100vw;
+  background: var(--clr-basic-grey-light);
+}
+
+.filter-header {
+  padding: 25px 60px;
+  padding-right: 0;
+  position: relative;
+  background: var(--clr-basic-grey-dark);
+}
+
+.filter-header::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100vw;
+  top: 0;
+  left: -100vw;
+  background: var(--clr-basic-grey-dark);
+}
+
+.filter-header h3 {
+  margin-top: 0;
+  line-height: 20px;
+}
+
+.filter-body {
+  padding-left: 60px;
+  padding-right: 66px;
+}
+
+.filter fieldset {
+  padding: 0;
+  padding-top: 16px;
+  border: none;
+  border-top: 2px solid black;
+}
+
+.filter-form {
+  margin-top: 70px;
+}
+
+.filter h4 {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 14px;
   letter-spacing: 0.1em;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 .filter label {
@@ -615,14 +712,133 @@ h4 {
   line-height: 19px;
 }
 
+.filter-colors {
+  margin-top: 33px;
+}
+
+.filter-colors li {
+  padding: 10px 0;
+}
+
+.filter-colors li:first-of-type {
+  padding-top: 0;
+}
+
+
+.filter-bluetooth {
+  margin-top: 32px;
+}
+
+/* sorting */
+.items {
+  width: 100%;
+}
+
+.items-sorting {
+  padding: 25px 71px;
+  padding-right: 0;
+  background: var(--clr-basic-grey-light);
+  display: flex;
+  position: relative;
+}
+
+.items-sorting h3 {
+  margin: 0;
+}
+
+.items-sorting::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100vw;
+  top: 0;
+  right: -100vw;
+  background: var(--clr-basic-grey-light);
+}
+
+.sorting-types {
+  margin-left: 72px;
+  display: flex;
+}
 
 .sorting-types li {
+  margin-right: 32px;
   font-size: 14px;
   opacity: 0.3;
 }
 
+.sorting-types li:last-of-type {
+  margin-right: 0px;
+}
+
 .sorting-types li.current {
   opacity: 1;
+}
+
+.sorting-order {
+  display: flex;
+  margin-left: auto;
+}
+
+.sorting-order a {
+  font-size: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("../img/dec/triangle.svg") 50% 50% no-repeat;
+}
+
+.sorting-order-desc {
+  transform: scaleY(-1);
+  margin-left: 13px;
+}
+
+.items-section {
+  padding-left: 70px;
+
+}
+
+.items-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 48px;
+  margin-top: 70px;
+}
+
+.item-card {
+  max-width: 360px;
+}
+
+.item-image {
+  position: relative;
+  background: #eee;
+}
+
+.item-image img {
+  width: 100%;
+}
+
+.item-hover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: rgba(238, 238, 238, 0.7);
+}
+
+.item-image:hover .item-hover {
+  display: flex;
+}
+
+.button-to-basket {
+  width: 200px;
 }
 
 .item-title {
@@ -631,17 +847,22 @@ h4 {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.05em;
+  display: flex;
+  justify-content: space-between;
 }
+
 
 .item-price {
   font-weight: 300;
   font-size: 16px;
+  white-space: nowrap;
 }
 
 
 .item-button-compare {
   font-size: 13px;
   letter-spacing: 0.1em;
+  background: none;
 }
 
 .items-pagination {
@@ -650,15 +871,76 @@ h4 {
   font-size: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  padding-left: 71px;
+  margin-top: 45px;
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: center;
+
+  padding: 25px 30px;
+  background: var(--clr-basic-grey-light);
+}
+
+.pagination-back {
+  margin-right: auto;
+}
+
+.pagination-forward {
+  margin-left: auto;
 }
 
 .pagination-list li {
   opacity: 0.3;
 }
 
+.pagination-list a {
+  padding: 15px;
+}
+
+.pagination-back a {
+  padding-left: 0;
+}
+
+.pagination-forward a {
+  padding-right: 0;
+}
+
 li.pagination-back,
 li.pagination-current,
 li.pagination-forward {
   opacity: 1;
+}
+
+/*checkbox*/
+input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 41px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid black;
+  border-radius: 2px;
+
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+
+input[type="checkbox"]:checked + label::before {
+  background: url("/img/dec/check.svg") 50% 50% no-repeat;
+
 }
 
