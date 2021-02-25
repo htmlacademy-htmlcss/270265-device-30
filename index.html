@@ -72,10 +72,10 @@
 
 		<main>
 			<section class="slider container">
-        <div class="slider-box">
+        <div class="slider-box" data-tab-group="slider">
           <h2 class="d-none">Лучшие товары</h2>
           <ol class="slider-list">
-            <li class="slider-item">
+            <li class="slider-item tab-current" data-tab="slide_1">
               <div class="slider-item-image">
                 <img src="img/content/index/slider_1.png" width="384" height="486" alt="Палка для селфи">
               </div>
@@ -98,14 +98,14 @@
               </div>
             </li>
 
-            <li class="slider-item d-none">
+            <li class="slider-item" data-tab="slide_2">
               <div class="slider-item-image">
                 <img src="img/content/index/slider_2.png" width="345" height="485" alt="Фитнес-браслет">
               </div>
               <div class="slider-item-info">
                 <p class="title">Худеем<br>правильно!</p>
                 <p class="slider-item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-                <a class="button" href="#">Подробнее</a>
+                <a class="button slider-item-button" href="#">Подробнее</a>
                 <table class="slider-item-params">
                   <tr>
                     <td>48 часов</td>
@@ -117,14 +117,14 @@
               </div>
             </li>
 
-            <li class="slider-item d-none">
+            <li class="slider-item" data-tab="slide_3">
               <div class="slider-item-image">
                 <img src="img/content/index/slider_3.png" width="526" height="334" alt="Квадрокоптер">
               </div>
               <div class="slider-item-info">
                 <p class="title">Порхает как бабочка,<br>жалит как пчела!</p>
                 <p class="slider-item-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-                <a class="button" href="#">Подробнее</a>
+                <a class="button slider-item-button" href="#">Подробнее</a>
                 <table class="slider-item-params">
                   <tr>
                     <td>800 м</td>
@@ -138,10 +138,10 @@
               </div>
             </li>
           </ol>
-          <p class="slider-buttons-box">
-            <button class="slider-button slider-button-current" type="button">Первый слайд</button>
-            <button class="slider-button" type="button">Второй слайд</button>
-            <button class="slider-button" type="button">Третий слайд</button>
+          <p data-tab-buttons="slider" class="slider-buttons-box">
+            <button class="slider-button tab-current" type="button" data-tab-button="slide_1">Первый слайд</button>
+            <button class="slider-button" type="button" data-tab-button="slide_2">Второй слайд</button>
+            <button class="slider-button" type="button" data-tab-button="slide_3">Третий слайд</button>
           </p>
         </div>
 			</section>
@@ -150,22 +150,22 @@
 				<h2 class="d-none">Популярные категории</h2>
 				<ul class="popular-list">
 					<li>
-						<a href="#">Виртуальная<br>реальность</a>
+						<a class="popular-vr" href="#">Виртуальная<br>реальность</a>
 					</li>
 					<li>
-						<a href="#">Моноподы<br>для селфи</a>
+						<a class="popular-monopods" href="#">Моноподы<br>для селфи</a>
 					</li>
 					<li>
-						<a href="#">Экшн-камеры</a>
+						<a class="popular-camera" href="#">Экшн-камеры</a>
 					</li>
 					<li>
-						<a href="#">Фитнес-браслеты</a>
+						<a class="popular-brace" href="#">Фитнес-браслеты</a>
 					</li>
 					<li>
-						<a href="#">Умные часы</a>
+						<a class="popular-clock" href="#">Умные часы</a>
 					</li>
 					<li>
-						<a href="#">Квадрокоптеры</a>
+						<a class="popular-quadro" href="#">Квадрокоптеры</a>
 					</li>
 				</ul>
 			</section>

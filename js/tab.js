@@ -18,8 +18,6 @@ window.Utils = window.Utils || {};
         const tab = tabGroup.querySelector(`[data-tab="${tabSelector}"]`);
         // if !tab - go exception/alert
 
-        console.log(tabGroupSelector);
-        console.log(tab);
         btn.addEventListener("click", function(evt) {
           evt.preventDefault();
           swtichButtonTo(btnGroup, btn);

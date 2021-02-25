@@ -166,6 +166,7 @@ h1 {
 
 .button:active {
   color: rgba(0, 0, 0, 0.3);
+  outline: none;
 }
 
 .breadcrumbs li {
@@ -571,7 +572,14 @@ h1 {
 }
 
 .slider-item {
+  display: flex;
 	position: relative;
+}
+
+.slider-item:not(.tab-current) {
+  opacity: 1;
+  position: absolute;
+  left: -999%;
 }
 
 .slider-item:before {
@@ -594,16 +602,13 @@ h1 {
   position: relative;
 }
 
-.slider-item {
-  display: flex;
-}
-
 .slider-item > * {
   width: 50%;
 }
 
 .slider-item-image {
   text-align: center;
+  min-height: 500px;
 }
 
 .slider-item-info {
@@ -676,7 +681,7 @@ h1 {
   margin: 7px;
 }
 
-.slider-button-current::before {
+.slider-buttons-box .tab-current::before {
   content: "";
   display: block;
   width: 6px;
@@ -700,33 +705,64 @@ h1 {
   justify-content: space-between;
 }
 
-.popular-list li::before {
+.popular-list a {
+  display: inline-block;
+  position: relative;
+}
+
+.popular-list a::before {
   content: "";
   display: block;
   width: 160px;
   height: 160px;
-  background: url("../img/content/index/popular-1.svg") 50% 50% no-repeat;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   background-color: var(--clr-special);
   margin-bottom: 38px;
 }
 
-.popular-list li:nth-of-type(2)::before {
+.popular-list a:hover::before {
+  background-color: var(--clr-special-dark);
+}
+
+.popular-list a::after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 160px;
+  background-color: var(--clr-special-dark);
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.popular-list a:active::after {
+  opacity: 0.7;
+}
+
+.popular-vr:before {
+  background-image: url("../img/content/index/popular-1.svg");
+}
+
+.popular-monopods:before {
   background-image: url("../img/content/index/popular-2.svg");
 }
 
-.popular-list li:nth-of-type(3)::before {
+.popular-camera:before {
   background-image: url("../img/content/index/popular-3.svg");
 }
 
-.popular-list li:nth-of-type(4)::before {
+.popular-brace:before {
   background-image: url("../img/content/index/popular-4.svg");
 }
 
-.popular-list li:nth-of-type(5)::before {
+.popular-clock:before {
   background-image: url("../img/content/index/popular-5.svg");
 }
 
-.popular-list li:nth-of-type(6)::before {
+.popular-quadro:before {
   background-image: url("../img/content/index/popular-6.svg");
 }
 
@@ -786,6 +822,7 @@ h1 {
 
 .services-buttons .tab-current {
   color: var(--clr-special);
+  outline: none;
 }
 
 .services-buttons .tab-current::before,
