@@ -94,10 +94,10 @@
 
           <div class="filter-body">
             <form class="filter-form" action="/">
-              <fieldset>
+              <fieldset class="filter-price">
                 <h4>Стоимость</h4>
-                <label>От <input type="number" name="filter-price-min" value="0"  min="0" max="7499"></label>
-                <label>До <input type="number" name="filter-price-max" value="5000"  min="1" max="7500"></label>
+                <label class="filter-price-min">От <input type="number" name="filter-price-min" value="0"  min="0" max="7499"></label>
+                <label class="filter-price-max">До <input type="number" name="filter-price-max" value="5000"  min="1" max="7500"></label>
               </fieldset>
               <fieldset>
                 <h4>Цвет</h4>
@@ -256,6 +256,8 @@
         </div>
       </div>
 		</footer>
+
+    <script src="./js/catalog.js"></script>
 
 	</body>
 </html>
