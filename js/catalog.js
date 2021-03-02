@@ -7,17 +7,21 @@
 
   const minLabel = priceFieldset.querySelector('.filter-price-min');
   const minInput = minLabel.querySelector('input');
-  minInput.setAttribute('type', 'hidden');
 
   const maxLabel = priceFieldset.querySelector('.filter-price-max');
   const maxInput = maxLabel.querySelector('input');
-  maxInput.setAttribute('type', 'hidden');
 
   priceFieldset.innerHTML += /*html*/`
     <div class="price-range">
       <div class="price-range-filler">
-        <div class="range-control range-control-min"></div>
-        <div class="range-control range-control-max"></div>
+        <div class="price-range-grey-left"></div>
+        <div class="price-range-grey-right"></div>
+        <div class="range-control range-control-min">
+          <span class="range-sublabel">от <span class="range-from"></span></span>
+        </div>
+        <div class="range-control range-control-max">
+        <span class="range-sublabel">до <span class="range-to"></span></span>
+        </div>
       </div>
     </div>
   `;
@@ -27,16 +31,23 @@
   const minRangeValue = minInput.getAttribute('min');
   const maxRangeValue = maxInput.getAttribute('max');
   const rangeCoeff = (maxRangeValue - minRangeValue) / rangeWidth;
+  const greyLeft = priceFieldset.querySelector('.price-range-grey-left');
+  const greyRight = priceFieldset.querySelector('.price-range-grey-right');
+  const rangeFrom = range.querySelector('.range-from');
+  const rangeTo = range.querySelector('.range-to');
 
   let minControl = range.querySelector('.range-control-min');
   let minControlLeft = 0;
   let maxControl = range.querySelector('.range-control-max');
   let maxControlLeft = 0;
 
-  const offsetFix = -10;
+  const rightOffsetFix = -20;
 
-  setMinControlByValue(minInput.value);
-  setMaxControlByValue(maxInput.value);
+  minControlLeft = getControlOffset(minInput.value);
+  maxControlLeft = getControlOffset(maxInput.value, rightOffsetFix);
+
+  moveMinControl(minInput.value);
+  moveMaxControl(maxInput.value);
 
   let prevX = 0;
   let newX = 0;
@@ -44,22 +55,24 @@
   maxControl.onmousedown = maxMouseDown;
 
 
-  function getControlOffset(value) {
+  function getControlOffset(value, offsetFix = 0) {
     return ( value / rangeCoeff ) + offsetFix;
   }
 
-  function getValueByOffset(offset) {
+  function getValueByOffset(offset, offsetFix = 0) {
     return Math.round( (offset - offsetFix) * rangeCoeff );
   }
 
-  function setMinControlByValue( value ) {
-    minControlLeft = getControlOffset(value);
+  function moveMinControl() {
     minControl.style.left = `${minControlLeft}px`;
+    greyLeft.style.width = `${minControlLeft}px`;
+    rangeFrom.innerHTML = minInput.value;
   }
 
-  function setMaxControlByValue( value ) {
-    maxControlLeft = getControlOffset(value);
+  function moveMaxControl() {
     maxControl.style.left = `${maxControlLeft}px`;
+    greyRight.style.width = rangeWidth - maxControlLeft + 'px';
+    rangeTo.innerHTML = maxInput.value;
   }
 
 
@@ -76,18 +89,22 @@
   function minMouseMove(e) {
     e = e || window.event;
     e.preventDefault();
+
     minControlLeft = parseInt(minControl.style.left) + newX - prevX;
-    if( minControlLeft < offsetFix ) {
-      minControlLeft = offsetFix;
-    } else if( minControlLeft > rangeWidth + offsetFix ) {
-      minControlLeft = rangeWidth + offsetFix;
+
+    if( minControlLeft < 0 ) {
+      minControlLeft = 0;
+    } else if( minControlLeft > rangeWidth ) {
+      minControlLeft = rangeWidth;
     } else if( minControlLeft >= maxControlLeft - 20 ) {
       minControlLeft = maxControlLeft - 20;
     }
-    minControl.style.left = minControlLeft + 'px';
+
+    minInput.value = getValueByOffset(minControlLeft);
+    moveMinControl();
+
     prevX = newX;
     newX = e.clientX;
-    minInput.value = getValueByOffset(minControlLeft);
   }
 
   function maxMouseDown(e) {
@@ -102,18 +119,22 @@
   function maxMouseMove(e) {
     e = e || window.event;
     e.preventDefault();
+
     maxControlLeft = parseInt(maxControl.style.left) + newX - prevX;
-    if( maxControlLeft < offsetFix ) {
-      maxControlLeft = offsetFix;
-    } else if( maxControlLeft > rangeWidth + offsetFix ) {
-      maxControlLeft = rangeWidth + offsetFix;
+
+    if( maxControlLeft < rightOffsetFix ) {
+      maxControlLeft = rightOffsetFix;
+    } else if( maxControlLeft > rangeWidth + rightOffsetFix ) {
+      maxControlLeft = rangeWidth + rightOffsetFix;
     } else if( maxControlLeft <= minControlLeft + 20 ) {
       maxControlLeft = minControlLeft + 20;
     }
-    maxControl.style.left = maxControlLeft + 'px';
+
+    maxInput.value = getValueByOffset(maxControlLeft, rightOffsetFix);
+    moveMaxControl();
+
     prevX = newX;
     newX = e.clientX;
-    maxInput.value = getValueByOffset(maxControlLeft);
   }
 
   function rangeControlMouseUp() {

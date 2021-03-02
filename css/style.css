@@ -56,7 +56,6 @@
 html {
   height: 100%;
   overflow-x: hidden;
-  background: black !important;
 }
 
 body {
@@ -1321,6 +1320,14 @@ h1 {
   font-size: 0;
 }
 
+.hide-price-fieldset input {
+  opacity: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  left: -9999px;
+}
+
 .price-range {
   margin-bottom: 50px;
   height: 2px;
@@ -1346,6 +1353,31 @@ h1 {
 
 .range-control.clicked {
   cursor: grabbing;
+}
+
+.price-range-grey-left,
+.price-range-grey-right {
+  height: 2px;
+  background: #ccc;
+  position: absolute;
+}
+
+.price-range-grey-right {
+  right: 0;
+}
+
+.range-sublabel {
+   white-space: nowrap;
+   padding-top: 11px;
+   display: inline-block;
+   margin-left: -7px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.range-control-max .range-sublabel {
+  margin-left: -25px;
 }
 
 .filter-colors {
