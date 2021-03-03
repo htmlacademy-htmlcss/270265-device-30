@@ -300,7 +300,11 @@ h1 {
 
 .header-action_buttons a {
   padding-left: 25px;
-  background: url("../img/dec/man.svg") center left no-repeat;
+}
+
+.header-action_buttons li {
+  background-position: center left;
+  background-repeat: no-repeat;
 }
 
 .header-action-login {
@@ -310,12 +314,33 @@ h1 {
   margin-right: 7.5%;
 }
 
-.header-action-compare a {
+.header-action-login {
+  background-image: url("../img/dec/man.svg");
+}
+
+.header-action-compare {
   background-image: url("../img/dec/diagram.svg");
 }
 
-.header-action-basket a {
+.header-action-basket {
   background-image: url("../img/dec/basket.svg");
+}
+
+.header-username {
+  padding-left: 25px;
+  margin-right: -5px;
+}
+
+.header-logout {
+  opacity: 0.3;
+}
+
+.header-logout:hover {
+  opacity: 0.6;
+}
+
+.header-logout:active {
+  opacity: 1;
 }
 
 .header-links {
@@ -525,7 +550,11 @@ h1 {
   text-align: right;
 }
 
-.footer-actions a {
+.footer-actions {
+  /* position: absolute; */
+}
+
+.footer-actions > * {
   background-position: left center;
   background-repeat: no-repeat;
   padding-left: 25px;
@@ -534,7 +563,7 @@ h1 {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.footer-actions a:nth-of-type(1) {
+.footer-actions > *:nth-of-type(1) {
   margin-left: 0;
 }
 
@@ -567,7 +596,7 @@ h1 {
   opacity: 0.3;
 }
 
-.icon-input-alt::before {
+.icon-login-alt::before {
   background-image: url("../img/dec/man_alt.svg");
 
 }
@@ -1448,11 +1477,11 @@ h1 {
 }
 
 .sorting-types li:not(:last-of-type) {
-  margin-right: 32px;   
+  margin-right: 32px;
 }
 
 .sorting-types a {
-  font-size: 14px; 
+  font-size: 14px;
   opacity: 0.3;
 }
 
@@ -1595,7 +1624,7 @@ h1 {
 
 .pagination-back a,
 .pagination-forward a {
-  padding: 21px 30px;  
+  padding: 21px 30px;
   display: inline-block;
 }
 
@@ -1684,7 +1713,7 @@ input[type="radio"] {
   position: absolute;
   z-index: -1;
   width: 1px;
-  height: 1px;  
+  height: 1px;
 }
 
 input[type="radio"] + label {
@@ -1717,7 +1746,7 @@ input[type="radio"]:checked + label::after {
   content: "";
   display: block;
   width: 8px;
-  height: 8px;  
+  height: 8px;
   border-radius: 100%;
   background: black;
   position: absolute;
