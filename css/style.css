@@ -196,7 +196,7 @@ h1 {
   opacity: 0.6;
 }
 
-.clickable:focus {
+.clickable:active {
   opacity: 0.3;
 }
 
@@ -284,7 +284,7 @@ h1 {
   color: white;
 }
 
-.header-search-button:active :-moz-submit-invalid{
+.header-search-button:active {
   color:rgba(255, 255, 255, 0.3);
   border-radius: 0;
   border: none;
@@ -376,7 +376,7 @@ h1 {
   grid-template-columns: max-content max-content max-content;
   grid-gap:  8px 64px;
   padding-top: 24px;
-  padding-bottom: 37px;
+  padding-bottom: 35px;
   padding-left: 60px;
   background-color: var(--clr-special)
 }
@@ -1308,7 +1308,7 @@ h1 {
   letter-spacing: 0.1em;
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 2px;
 }
 
 .filter label {
@@ -1368,7 +1368,7 @@ h1 {
 
 .range-sublabel {
    white-space: nowrap;
-   padding-top: 11px;
+   padding-top: 14px;
    display: inline-block;
    margin-left: -7px;
   font-family: "Gilroy", "Arial", sans-serif;
@@ -1381,20 +1381,37 @@ h1 {
 }
 
 .filter-colors {
-  margin-top: 33px;
+  margin-top: 21px;
 }
 
-.filter-colors li {
-  padding: 10px 0;
+.filter-colors-list {
+  margin-top: 20px;
+}
+
+.filter-colors-list li {
+  margin: 11px 0;
 }
 
 .filter-colors li:first-of-type {
-  padding-top: 0;
+  margin-top: 0;
 }
 
 
 .filter-bluetooth {
-  margin-top: 32px;
+  margin-top: 25px;
+}
+
+.filter-bluetooth-list {
+  margin-top: 20px;
+}
+
+.filter-bluetooth-list li:not(:first-of-type) {
+  margin-top: 12px;
+}
+
+.filter-form-submit {
+  width: 100%;
+  margin-top: 39px;
 }
 
 /* sorting */
@@ -1426,21 +1443,24 @@ h1 {
 }
 
 .sorting-types {
-  margin-left: 72px;
+  margin-left: 74px;
   display: flex;
 }
 
-.sorting-types li {
-  margin-right: 32px;
-  font-size: 14px;
+.sorting-types li:not(:last-of-type) {
+  margin-right: 32px;   
+}
+
+.sorting-types a {
+  font-size: 14px; 
   opacity: 0.3;
 }
 
-.sorting-types li:last-of-type {
-  margin-right: 0px;
+.sorting-types a:hover {
+  opacity: 0.6;
 }
 
-.sorting-types li.current {
+.sorting-types a:active {
   opacity: 1;
 }
 
@@ -1461,6 +1481,21 @@ h1 {
   width: 20px;
   height: 20px;
   background: url("../img/dec/triangle.svg") 50% 50% no-repeat;
+  opacity: 0.2;
+}
+
+.sorting-order a.current {
+  opacity: 1;
+}
+
+.sorting-order a:hover,
+.sorting-order a.current:hover {
+  opacity: 0.4;
+}
+
+.sorting-order a:active,
+.sorting-order a.current:active {
+  opacity: 1;
 }
 
 .sorting-order-desc {
@@ -1492,6 +1527,7 @@ h1 {
 
 .item-image img {
   width: 100%;
+  display: block;
 }
 
 .item-hover {
@@ -1523,6 +1559,7 @@ h1 {
   letter-spacing: 0.05em;
   display: flex;
   justify-content: space-between;
+  margin-top: 29px;
 }
 
 
@@ -1546,15 +1583,30 @@ h1 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding-left: 71px;
-  margin-top: 45px;
+  margin-top: 41px;
 }
 
 .pagination-list {
   display: flex;
   justify-content: center;
-
-  padding: 25px 30px;
+  align-items: center;
   background: var(--clr-basic-grey-light);
+}
+
+.pagination-back a,
+.pagination-forward a {
+  padding: 21px 30px;  
+  display: inline-block;
+}
+
+.pagination-back a:hover,
+.pagination-forward a:hover {
+  background: #D9D9D9;
+}
+
+.pagination-back a:active,
+.pagination-forward a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .pagination-back {
@@ -1569,16 +1621,8 @@ h1 {
   opacity: 0.3;
 }
 
-.pagination-list a {
+.pagination-page {
   padding: 15px;
-}
-
-.pagination-back a {
-  padding-left: 0;
-}
-
-.pagination-forward a {
-  padding-right: 0;
 }
 
 li.pagination-back,
@@ -1592,11 +1636,13 @@ input[type="checkbox"] {
   opacity: 0;
   position: absolute;
   z-index: -1;
+  width: 1px;
+  height: 1px;
 }
 
 input[type="checkbox"] + label {
   position: relative;
-  padding-left: 41px;
+  padding-left: 42px;
   cursor: pointer;
 }
 
@@ -1607,14 +1653,82 @@ input[type="checkbox"] + label::before {
   height: 24px;
   border: 2px solid black;
   border-radius: 2px;
-
   position: absolute;
   bottom: -3px;
   left: 0;
+}
+
+input[type="checkbox"] + label:hover::before {
+  opacity: 0.6;
+}
+
+input[type="checkbox"] + label:active::before {
+  opacity: 1;
 }
 
 input[type="checkbox"]:checked + label::before {
   background: url("/img/dec/check.svg") 50% 50% no-repeat;
 
 }
+
+input[type="checkbox"]:disabled + label,
+input[type="checkbox"]:disabled + label::before {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+
+/* radio */
+input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  width: 1px;
+  height: 1px;  
+}
+
+input[type="radio"] + label {
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid black;
+  border-radius: 100%;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+
+input[type="radio"] + label:hover::before {
+  opacity: 0.6;
+}
+
+input[type="radio"] + label:active::before {
+  opacity: 1;
+}
+
+input[type="radio"]:checked + label::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;  
+  border-radius: 100%;
+  background: black;
+  position: absolute;
+  bottom: 5px;
+  left: 8px;
+}
+
+input[type="radio"]:disabled + label,
+input[type="radio"]:disabled + label::before {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 

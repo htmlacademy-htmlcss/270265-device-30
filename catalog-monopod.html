@@ -49,9 +49,9 @@
             <ul class="header-catalog-list">
               <li class="header-catalog-title"><a class="clickable" href="catalog.html">Каталог товаров</a></li>
               <div class="header-anchors-list">
-                <li><a class="clickable" href="#services-delivery" data-tab-anchor="services-delivery">Доставка</a></li>
-                <li class="header-anchor-warranty"><a class="clickable header-link-warranty" href="#services-warranty" data-tab-anchor="services-warranty">Гарантия</a></li>
-                <li class="header-anchor-contact"><a class="clickable" href="#section-contacts">Контакты</a></li>
+                <li><a class="clickable" href="#">Доставка</a></li>
+                <li class="header-anchor-warranty"><a class="clickable header-link-warranty" href="#">Гарантия</a></li>
+                <li class="header-anchor-contact"><a class="clickable" href="#">Контакты</a></li>
               </div>
               <li class="header-subcatalog-box">
                 <ul class="header-subcatalog">
@@ -99,9 +99,9 @@
                 <label class="filter-price-min">От <input type="number" name="filter-price-min" value="0"  min="0" max="7499"></label>
                 <label class="filter-price-max">До <input type="number" name="filter-price-max" value="5000"  min="1" max="7500"></label>
               </fieldset>
-              <fieldset>
+              <fieldset class="filter-colors">
                 <h4>Цвет</h4>
-                <ul class="filter-colors">
+                <ul class="filter-colors-list">
                   <li>
                     <input id="filter-color-black" type="checkbox" name="filter-colors" value="black" checked>
                     <label for="filter-color-black">Чёрный</label>
@@ -126,10 +126,18 @@
               </fieldset>
               <fieldset class="filter-bluetooth">
                 <h4>Bluetooth</h4>
-                <label><input type="radio" name="filter-bluetooth" value="1">Есть</label>
-                <label><input type="radio" name="filter-bluetooth" value="0">Нет</label>
+                <ul class="filter-bluetooth-list">
+                  <li>
+                    <input id="filter-bluetooth-on" type="radio" name="filter-bluetooth" value="1" checked>
+                    <label for="filter-bluetooth-on">Есть</label>
+                  </li>
+                  <li>
+                    <input id="filter-bluetooth-off" type="radio" name="filter-bluetooth" value="0">
+                    <label for="filter-bluetooth-off">Нет</label>
+                  </li>       
+                </ul>                        
               </fieldset>
-              <button class="button" type="submit">Показать</button>
+              <button class="button filter-form-submit" type="submit">Показать</button>
             </form>
           </div>
 
@@ -141,13 +149,13 @@
           <header class="items-sorting">
             <h3>Сортировка:</h3>
             <ul class="sorting-types">
-              <li class="current"><a href="#">По цене</a></li>
+              <li class="current">По цене</li>
               <li><a href="#">По типу</a></li>
               <li><a href="#">По популярности</a></li>
             </ul>
             <ul class="sorting-order">
               <li class="sorting-order-asc"><a href="#">По возрастанию</a></li>
-              <li class="sorting-order-desc"><a href="#">По убыванию</a></li>
+              <li class="sorting-order-desc"><a class="current" href="#">По убыванию</a></li>
             </ul>
           </header>
 
@@ -164,7 +172,7 @@
                 </div>
                 <h4 class="item-title">
                   <a class="item-link" href="#">Любительская селфи палка</a>
-                  <span class="item-price">1100 руб.</span>
+                  <span class="item-price">1 100 руб.</span>
                 </h4>
               </li>
 
@@ -178,7 +186,7 @@
                 </div>
                 <h4 class="item-title">
                   <a class="item-link" href="#">Профессиональная<br>селфи-палка</a>
-                  <span class="item-price">1500 руб.</span>
+                  <span class="item-price">1 500 руб.</span>
                 </h4>
               </li>
 
@@ -192,7 +200,7 @@
                 </div>
                 <h4 class="item-title">
                   <a class="item-link" href="#">Непотопляемая<br>селфи-палка</a>
-                  <span class="item-price">1500 руб.</span>
+                  <span class="item-price">1 500 руб.</span>
                 </h4>
               </li>
 
@@ -206,7 +214,7 @@
                 </div>
                 <h4 class="item-title">
                   <a class="item-link" href="#">Селфи-палка «Следуй за мной»</a>
-                  <span class="item-price">1900 руб.</span>
+                  <span class="item-price">1 900 руб.</span>
                 </h4>
               </li>
             </ul>
@@ -216,9 +224,9 @@
             <h3 class="d-none">Пагинация</h3>
             <ul class="pagination-list">
               <li class="pagination-back"><a>Назад</a></li>
-              <li class="pagination-current"><a>1</a></li>
-              <li><a href="catalog-monopod.html?p=2">2</a></li>
-              <li><a href="catalog-monopod.html?p=3">3</a></li>
+              <li class="pagination-current"><a class="pagination-page">1</a></li>
+              <li><a class="clickable pagination-page" href="catalog-monopod.html?p=2">2</a></li>
+              <li><a class="clickable pagination-page" href="catalog-monopod.html?p=3">3</a></li>
               <li class="pagination-forward"><a href="catalog-monopod.html?p=2">Вперёд</a></li>
             </ul>
           </section>
