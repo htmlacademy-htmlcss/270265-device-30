@@ -144,7 +144,7 @@
         </section>
 
         <section class="items">
-          <h2 class="d-none">Товары</h2>
+          <h2 class="visually-hidden">Товары</h2>
 
           <header class="items-sorting">
             <h3>Сортировка:</h3>
@@ -160,7 +160,7 @@
           </header>
 
           <section class="items-section">
-            <h3 class="d-none">Список товаров</h3>
+            <h3 class="visually-hidden">Список товаров</h3>
             <ul class="items-list">
               <li class="item-card">
                 <div class="item-image">
@@ -205,7 +205,7 @@
               </li>
 
               <li class="item-card">
-                <div class="item-image">
+                <div class="item-image item-image-new">
                   <img src="img/content/catalog/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                   <div class="item-hover">
                     <a class="button-to-basket button" href="#">В корзину</a>
@@ -221,7 +221,7 @@
           </section>
 
           <section class="items-pagination">
-            <h3 class="d-none">Пагинация</h3>
+            <h3 class="visually-hidden">Пагинация</h3>
             <ul class="pagination-list">
               <li class="pagination-back"><a>Назад</a></li>
               <li class="pagination-current"><a class="pagination-page">1</a></li>
@@ -237,29 +237,32 @@
 
 		<footer class="footer">
       <div class="container footer-box">
-        <div class="footer-left">
-          <a class="clickable" href="index.html"><img src="img/content/logo_alt.svg" width="163" height="35" alt="Логотип Device"></a>
-          <p class="footer-address">г. Москва, ул. Строителей, 15</p>
+        <a class="footer-logo clickable" href="index.html"><img src="img/content/logo_alt.svg" width="163" height="35" alt="Логотип Device"></a>
+        <div class="footer-actions">
+          <ul class="footer-actions-list">
+            <li><a class="footer-username with-icon icon-login-alt" href="#">Валентин Петухов</a></li>
+            <li class="footer-logout-item"><a href="#">Выйти</a></li>
+            <li><a class="with-icon icon-compare-alt" href="#">Сравнить</a></li>
+            <li><a class="with-icon icon-basket-alt" href="#">Корзина</a></li>
+          </ul>
         </div>
-        <div class="footer-center">
+
+        <div class="footer-info">
+          <p class="footer-address">г. Москва, ул. Строителей, 15</p>
           <ul class="footer-links">
-            <li><a class="clickable" href="#services-delivery">Доставка</a></li>
-            <li><a class="clickable" href="#services-warranty">Гарантия</a></li>
+            <li><a class="clickable" href="#services-delivery" data-tab-anchor="services-delivery">Доставка</a></li>
+            <li><a class="clickable" href="#services-warranty" data-tab-anchor="services-warranty">Гарантия</a></li>
             <li><a class="clickable" href="#section-contacts">Контакты</a></li>
           </ul>
+          <p class="footer-phone clickable"><a href="tel:74954959595">Тел.: +7 (495) 495-95-95</a></p>
+        </div>
+
+        <div class="footer-bottom">
           <ul class="footer-social">
             <li><a class="social-facebook" href="#" title="Ссылка на фейсбук">Фейсбук</a></li>
             <li><a class="social-instagram" href="#" title="Ссылка на инсту">Инстаграмм</a></li>
             <li><a class="social-twitter" href="#" title="Ссылка на твиттер">Твиттер</a></li>
           </ul>
-        </div>
-        <div class="footer-right">
-          <p class="footer-actions">
-            <a class="icon-input-alt" href="#">Войти</a>
-            <a class="icon-compare-alt" href="#">Сравнить</a>
-            <a class="icon-basket-alt" href="#">Корзина</a>
-          </p>
-          <p class="footer-phone clickable"><a href="tel:74954959595">Тел.: +7 (495) 495-95-95</a></p>
           <a class="footer-creator clickable" href="https://htmlacademy.ru/">htmlacademy</a>
         </div>
       </div>
