@@ -418,7 +418,8 @@ h1 {
 
 .header-catalog-title a:hover ~ .header-subcatalog,
 .header-catalog-title a:focus ~ .header-subcatalog,
-.header-subcatalog:hover {
+.header-subcatalog:hover,
+.header-subcatalog:focus-within {
   opacity: 1;
   pointer-events: auto;
 }
