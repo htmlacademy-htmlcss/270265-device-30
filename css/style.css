@@ -1534,12 +1534,12 @@ h1 {
   margin-left: 13px;
 }
 
-.items-section {
+.product-section {
   padding-left: 70px;
 
 }
 
-.items-list {
+.products-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 40px;
@@ -1547,22 +1547,21 @@ h1 {
   margin-top: 70px;
 }
 
-.item-card {
+.product-card {
   max-width: 360px;
 }
 
-.item-image {
+.product-image {
   position: relative;
   background: #eee;
 }
 
-
-.item-image img {
+.product-image img {
   width: 100%;
   display: block;
 }
 
-.item-hover {
+.product-hover {
   display: none;
   position: absolute;
   top: 0;
@@ -1575,11 +1574,11 @@ h1 {
   background: rgba(238, 238, 238, 0.7);
 }
 
-.item-image:hover .item-hover {
+.product-image:hover .product-hover {
   display: flex;
 }
 
-.item-image-new::before {
+.product-image-new::before {
   content: "New";
   display: flex;
   justify-content: center;
@@ -1602,7 +1601,7 @@ h1 {
   width: 200px;
 }
 
-.item-title {
+.product-title {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -1614,20 +1613,20 @@ h1 {
 }
 
 
-.item-price {
+.product-price {
   font-weight: 300;
   font-size: 16px;
   white-space: nowrap;
 }
 
 
-.item-button-compare {
+.product-button-compare {
   font-size: 13px;
   letter-spacing: 0.1em;
   background: none;
 }
 
-.items-pagination {
+.pagination {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 16px;
