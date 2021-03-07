@@ -378,21 +378,19 @@ h1 {
   margin-right: 56px;
 }
 
-.header-subcatalog-box {
+.header-subcatalog {
   opacity: 0;
   pointer-events: none;
   position: absolute;
-  top: 99%;
-  width: 100%;
+  left: -60px;
+  top: 25px;
   background-color: var(--clr-special);
   z-index: 1;
-}
-
-.header-subcatalog {
+  width: 1160px;
   display: grid;
   grid-template-columns: max-content max-content max-content;
   grid-gap:  8px 64px;
-  padding-top: 24px;
+  padding-top: 27px;
   padding-bottom: 35px;
   padding-left: 60px;
   background-color: var(--clr-special)
@@ -418,8 +416,9 @@ h1 {
   pointer-events: none;
 }
 
-.header-catalog-title:hover ~ .header-subcatalog-box,
-.header-subcatalog-box:hover {
+.header-catalog-title a:hover ~ .header-subcatalog,
+.header-catalog-title a:focus ~ .header-subcatalog,
+.header-subcatalog:hover {
   opacity: 1;
   pointer-events: auto;
 }
