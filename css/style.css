@@ -358,26 +358,24 @@ h1 {
   width: 100%;
   display: flex;
   position: relative;
+  justify-content: flex-end;
 }
 
 .header-catalog-title {
   margin-left: 60px;
+  margin-right: auto;
 }
 
-.header-anchors-list {
-  padding-left: 20px;
-  padding-right: 56px;
-  margin-left: auto;
-  display: flex;
-  width: 50%;
+.header-anchor-delivery {
+  margin-right: 36px;
 }
 
-.header-link-warranty {
-  margin-left: 35px;
+.header-anchor-services {
+  margin-right: 107px;
 }
 
-.header-anchor-contact {
-  margin-left: auto;
+.header-anchor-contacts {
+  margin-right: 56px;
 }
 
 .header-subcatalog-box {
@@ -417,6 +415,7 @@ h1 {
   position: absolute;
   top: 6px;
   right: -32px;
+  pointer-events: none;
 }
 
 .header-catalog-title:hover ~ .header-subcatalog-box,
@@ -432,6 +431,8 @@ h1 {
   letter-spacing: 0;
   font-size: 15px;
 }
+
+
 
 /* footer */
 .footer {
@@ -453,13 +454,13 @@ h1 {
   position: absolute;
   bottom: 13px;
   left: 20px;
-  
+
 }
 
 .footer-logo {
   position: absolute;
   left: 20;
-  top: 22px;  
+  top: 22px;
 }
 
 .footer-actions {
@@ -468,15 +469,15 @@ h1 {
 
 .footer-actions-list {
   display: flex;
-  justify-content: flex-end;  
+  justify-content: flex-end;
 }
 
 .footer-actions-list > * {
-  margin-left: 40px;  
+  margin-left: 40px;
 }
 
 .with-icon {
-  padding-left: 25px;  
+  padding-left: 25px;
   position: relative;
 }
 
@@ -565,7 +566,7 @@ h1 {
   margin-right: 0;
 }
 
-.footer-phone {  
+.footer-phone {
   flex: 1;
   text-align: right;
 }
@@ -578,7 +579,7 @@ h1 {
 
 .footer-social {
   display: flex;
-  margin-top: 58px;  
+  margin-top: 58px;
 }
 
 .footer-social a {
@@ -621,7 +622,7 @@ h1 {
   display: inline-block;
   width: 27px;
   height: 34px;
-  background: url("../img/dec/htmlacademy.svg") center center no-repeat;  
+  background: url("../img/dec/htmlacademy.svg") center center no-repeat;
   position: absolute;
   right: 0;
 }
@@ -1592,10 +1593,10 @@ h1 {
   color: rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 30px;
-  right: 26px;  
+  right: 26px;
   font-family: "Gilroy", "Arial", sans-serif;
-  font-size: 12px;  
-  font-weight: bold;  
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .button-to-basket {
