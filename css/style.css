@@ -358,43 +358,39 @@ h1 {
   width: 100%;
   display: flex;
   position: relative;
+  justify-content: flex-end;
 }
 
 .header-catalog-title {
   margin-left: 60px;
+  margin-right: auto;
 }
 
-.header-anchors-list {
-  padding-left: 20px;
-  padding-right: 56px;
-  margin-left: auto;
-  display: flex;
-  width: 50%;
+.header-anchor-delivery {
+  margin-right: 36px;
 }
 
-.header-link-warranty {
-  margin-left: 35px;
+.header-anchor-warranty {
+  margin-right: 107px;
 }
 
-.header-anchor-contact {
-  margin-left: auto;
-}
-
-.header-subcatalog-box {
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 99%;
-  width: 100%;
-  background-color: var(--clr-special);
-  z-index: 1;
+.header-anchor-contacts {
+  margin-right: 56px;
 }
 
 .header-subcatalog {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: -60px;
+  top: 25px;
+  background-color: var(--clr-special);
+  z-index: 1;
+  width: 1160px;
   display: grid;
   grid-template-columns: max-content max-content max-content;
   grid-gap:  8px 64px;
-  padding-top: 24px;
+  padding-top: 27px;
   padding-bottom: 35px;
   padding-left: 60px;
   background-color: var(--clr-special)
@@ -417,10 +413,13 @@ h1 {
   position: absolute;
   top: 6px;
   right: -32px;
+  pointer-events: none;
 }
 
-.header-catalog-title:hover ~ .header-subcatalog-box,
-.header-subcatalog-box:hover {
+.header-catalog-title a:hover ~ .header-subcatalog,
+.header-catalog-title a:focus ~ .header-subcatalog,
+.header-subcatalog:hover,
+.header-subcatalog:focus-within {
   opacity: 1;
   pointer-events: auto;
 }
@@ -432,6 +431,8 @@ h1 {
   letter-spacing: 0;
   font-size: 15px;
 }
+
+
 
 /* footer */
 .footer {
@@ -453,13 +454,13 @@ h1 {
   position: absolute;
   bottom: 13px;
   left: 20px;
-  
+
 }
 
 .footer-logo {
   position: absolute;
   left: 20;
-  top: 22px;  
+  top: 22px;
 }
 
 .footer-actions {
@@ -468,15 +469,15 @@ h1 {
 
 .footer-actions-list {
   display: flex;
-  justify-content: flex-end;  
+  justify-content: flex-end;
 }
 
 .footer-actions-list > * {
-  margin-left: 40px;  
+  margin-left: 40px;
 }
 
 .with-icon {
-  padding-left: 25px;  
+  padding-left: 25px;
   position: relative;
 }
 
@@ -565,7 +566,7 @@ h1 {
   margin-right: 0;
 }
 
-.footer-phone {  
+.footer-phone {
   flex: 1;
   text-align: right;
 }
@@ -578,7 +579,7 @@ h1 {
 
 .footer-social {
   display: flex;
-  margin-top: 58px;  
+  margin-top: 58px;
 }
 
 .footer-social a {
@@ -621,7 +622,7 @@ h1 {
   display: inline-block;
   width: 27px;
   height: 34px;
-  background: url("../img/dec/htmlacademy.svg") center center no-repeat;  
+  background: url("../img/dec/htmlacademy.svg") center center no-repeat;
   position: absolute;
   right: 0;
 }
@@ -1534,12 +1535,12 @@ h1 {
   margin-left: 13px;
 }
 
-.items-section {
+.product-section {
   padding-left: 70px;
 
 }
 
-.items-list {
+.products-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 40px;
@@ -1547,22 +1548,21 @@ h1 {
   margin-top: 70px;
 }
 
-.item-card {
+.product-card {
   max-width: 360px;
 }
 
-.item-image {
+.product-image {
   position: relative;
   background: #eee;
 }
 
-
-.item-image img {
+.product-image img {
   width: 100%;
   display: block;
 }
 
-.item-hover {
+.product-hover {
   display: none;
   position: absolute;
   top: 0;
@@ -1575,11 +1575,11 @@ h1 {
   background: rgba(238, 238, 238, 0.7);
 }
 
-.item-image:hover .item-hover {
+.product-image:hover .product-hover {
   display: flex;
 }
 
-.item-image-new::before {
+.product-image-new::before {
   content: "New";
   display: flex;
   justify-content: center;
@@ -1592,17 +1592,17 @@ h1 {
   color: rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 30px;
-  right: 26px;  
+  right: 26px;
   font-family: "Gilroy", "Arial", sans-serif;
-  font-size: 12px;  
-  font-weight: bold;  
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .button-to-basket {
   width: 200px;
 }
 
-.item-title {
+.product-title {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -1614,20 +1614,20 @@ h1 {
 }
 
 
-.item-price {
+.product-price {
   font-weight: 300;
   font-size: 16px;
   white-space: nowrap;
 }
 
 
-.item-button-compare {
+.product-button-compare {
   font-size: 13px;
   letter-spacing: 0.1em;
   background: none;
 }
 
-.items-pagination {
+.pagination {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 16px;
