@@ -11,21 +11,6 @@
   const maxLabel = priceFieldset.querySelector('.filter-price-max');
   const maxInput = maxLabel.querySelector('input');
 
-  priceFieldset.innerHTML += /*html*/`
-    <div class="price-range">
-      <div class="price-range-filler">
-        <div class="price-range-grey-left"></div>
-        <div class="price-range-grey-right"></div>
-        <div class="range-control range-control-min">
-          <span class="range-sublabel">от <span class="range-from"></span></span>
-        </div>
-        <div class="range-control range-control-max">
-        <span class="range-sublabel">до <span class="range-to"></span></span>
-        </div>
-      </div>
-    </div>
-  `;
-
   const range = priceFieldset.querySelector('.price-range');
   const rangeWidth = range.offsetWidth;
   const minRangeValue = minInput.getAttribute('min');
