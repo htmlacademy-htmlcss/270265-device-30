@@ -24,7 +24,7 @@ window.Utils = window.Utils || {};
       });
 
       form.onsubmit = function() {
-
+        form.classList.remove('modal-error');
         let success = true;
         fieldsToCheck.forEach(function(field) {
           if( !field.check(field.value) ) {
@@ -32,6 +32,7 @@ window.Utils = window.Utils || {};
             success = false;
           }
         });
+        if( !success ) form.classList.add('modal-error');
         return success;
       }
     });

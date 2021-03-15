@@ -133,6 +133,7 @@ h1 {
   display: inline-block;
   text-align: center;
   z-index: 1;
+  vertical-align: baseline;
 }
 
 .button::before,
@@ -273,6 +274,7 @@ h1 {
 .header-search-button:active,
 .header-search-button:focus {
   display: inline-block;
+  vertical-align: baseline;
 }
 
 .header-search-button:hover {
@@ -588,6 +590,7 @@ h1 {
   width: 32px;
   height: 32px;
   opacity: 0.3;
+  vertical-align: baseline;
 }
 
 .footer-social a:hover {
@@ -620,6 +623,7 @@ h1 {
   font-size: 0;
   margin-top: 63px;
   display: inline-block;
+  vertical-align: baseline;
   width: 27px;
   height: 34px;
   background: url("../img/dec/htmlacademy.svg") center center no-repeat;
@@ -795,6 +799,7 @@ h1 {
 .popular-list a {
   display: inline-block;
   position: relative;
+  vertical-align: baseline;
 }
 
 .popular-list a::before {
@@ -863,6 +868,11 @@ h1 {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.05em;
+  max-width: 160px;
+}
+
+.popular-list li.fix-spacing {
+  letter-spacing: 0;
 }
 
 /* services */
@@ -1082,14 +1092,42 @@ h1 {
   height: 100vh;
   top: 0;
   left: 0;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
+  transform: translateY(-2000px);  
 }
 
-.modal-show {
-  display: flex;
+.modal-show { 
+  transition: transform 0.5s;
+  transform: translateY(0);    
+}
+
+.modal-error {
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
 .modal-box {
@@ -1183,7 +1221,7 @@ h1 {
 .feedback input.invalid,
 .feedback textarea.invalid {
   background: #F6DADA;
-  border: #F6DADA;
+  border-color: #F6DADA;
   color: rgba(0, 0, 0, 0.4);
 }
 
@@ -1207,12 +1245,12 @@ h1 {
 }
 
 .modal-map {
-  height: 540px;
+  max-height: 540px;
 }
 
 .modal-map  iframe {
   width: 100%;
-  height: 540px;
+  max-height: 540px;
 }
 
 /* page catalog_item */
@@ -1399,10 +1437,11 @@ h1 {
 }
 
 .range-sublabel {
-   white-space: nowrap;
-   padding-top: 14px;
-   display: inline-block;
-   margin-left: -7px;
+  white-space: nowrap;
+  padding-top: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: -7px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -1648,6 +1687,7 @@ h1 {
 .pagination-forward a {
   padding: 21px 30px;
   display: inline-block;
+  vertical-align: baseline;
 }
 
 .pagination-back a:hover,
