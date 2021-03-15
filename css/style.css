@@ -1096,12 +1096,12 @@ h1 {
   justify-content: center;
   align-items: center;
   z-index: 10;
-  transform: translateY(-2000px);  
+  transform: translateY(-2000px);
 }
 
-.modal-show { 
+.modal-show {
   transition: transform 0.5s;
-  transform: translateY(0);    
+  transform: translateY(0);
 }
 
 .modal-error {
@@ -1758,7 +1758,7 @@ input[type="checkbox"] + label:active::before {
 }
 
 input[type="checkbox"]:checked + label::before {
-  background: url("/img/dec/check.svg") 50% 50% no-repeat;
+  background: url("../img/dec/check.svg") 50% 50% no-repeat;
 
 }
 
