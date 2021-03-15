@@ -34,6 +34,7 @@ window.Utils = window.Utils || {};
   function closeModal(modal) {
     if( modal.classList.contains("modal-show") ) {
       modal.classList.remove("modal-show");
+      modal.classList.remove("modal-error");
     }
   }
 }
